@@ -28,6 +28,6 @@
   color: crimson;
 }
 
-a:hover {
+.container a:hover {
   text-decoration: underline;
 }
