@@ -1,0 +1,88 @@
+.container {
+}
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 700px;
+  position: relative;
+}
+.inpt {
+  padding: 50px 50px 30px 50px;
+  font-size: 50px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--text-color);
+}
+.inpt::placeholder {
+  color: #b3b3b3;
+}
+
+.btn,
+.AddBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+.add {
+  display: flex;
+  gap: 20px;
+  background-color: var(--bg-color);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 60px;
+}
+.btn {
+}
+.AddBtn {
+  opacity: 0.8;
+}
+.AddBtn:hover {
+  opacity: 1;
+}
+.textArea {
+  width: 100%;
+}
+.publishBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #2b6e29;
+  color: white;
+  cursor: pointer;
+  left: 180px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.publishBtn:hover {
+  opacity: 1;
+}
+.AddBtn label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.select {
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #2b6e29;
+  color: white;
+  border: none;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+.select:hover {
+  opacity: 1;
+}
+.select option {
+  font-weight: bold;
+}

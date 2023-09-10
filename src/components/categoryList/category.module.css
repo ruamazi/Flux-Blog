@@ -1,0 +1,68 @@
+.container {
+}
+.title {
+  margin: 50px 0;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 15%;
+  height: 80px;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+.category:hover {
+  transform: scale(1.1);
+}
+.image {
+  border-radius: 50%;
+}
+.style {
+  background-color: var(--style-color);
+}
+.fashion {
+  background-color: var(--fashion-color);
+}
+.food {
+  background-color: var(--food-color);
+}
+.travel {
+  background-color: var(--travel-color);
+}
+.culture {
+  background-color: var(--culture-color);
+}
+.coding {
+  background-color: var(--coding-color);
+}
+
+@media (max-width: 1288px) {
+  .category {
+    margin-bottom: 10px;
+  }
+  .categories {
+    gap: 5px;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 1024px) {
+  .category {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .category {
+    width: 45%;
+  }
+}
+@media (max-width: 640px) {
+}

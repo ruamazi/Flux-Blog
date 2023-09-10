@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Comme:wght@100;200;300&display=swap");
+
+:root {
+  --bg-color: white;
+  --text-color: #0f172a;
+  --soft-bg: #f0f0f0;
+  --soft-text-color: #626262;
+  --coding-color: rgba(114, 250, 230, 0.4);
+  --travel-color: rgba(114, 189, 250, 0.4);
+  --style-color: rgba(250, 114, 177, 0.4);
+  --fashion-color: rgba(232, 250, 114, 0.4);
+  --food-color: rgba(116, 250, 114, 0.4);
+  --culture-color: rgba(250, 177, 114, 0.4);
+  --hover-color-bg: rgba(0, 0, 0, 0.1);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.light {
+}
+.dark {
+  --bg-color: #0f172a;
+  --text-color: #ddd;
+  --soft-bg: #1f273a;
+  --soft-text-color: #a6a6a6;
+  --hover-color-bg: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.wrapper {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+/*categories bg colors*/
+.style {
+  background-color: var(--style-color);
+}
+.fashion {
+  background-color: var(--fashion-color);
+}
+.food {
+  background-color: var(--food-color);
+}
+.travel {
+  background-color: var(--travel-color);
+}
+.culture {
+  background-color: var(--culture-color);
+}
+.coding {
+  background-color: var(--coding-color);
+}
+/*react-quill*/
+.ql-container {
+  font-size: 28px !important;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  color: #b3b3b3;
+}
+
+@media (max-width: 1536px) {
+  .wrapper {
+    max-width: 1366px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .wrapper {
+    max-width: 1024px;
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 640px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 570px;
+  }
+}

@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+  padding: 5px 10px;
+  color: var(--text-color);
+  margin-top: 30px;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+.content {
+  display: flex;
+  gap: 50px;
+}
