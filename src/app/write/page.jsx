@@ -1,8 +1,6 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import styles from "./writePage.module.css";
-const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.bubble.css";
 import { BiImageAdd, BiLinkExternal, BiAddToQueue } from "react-icons/bi";
 import { AiOutlineVideoCameraAdd } from "react-icons/ai";
@@ -15,10 +13,13 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
+import dynamic from "next/dynamic";
 
 const getTime = new Date().getTime();
 
 const WritePage = () => {
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState("");
   const [file, setFile] = useState(null);
