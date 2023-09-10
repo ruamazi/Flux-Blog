@@ -4,9 +4,8 @@ import Pagination from "../pagination/Pagination";
 import Card from "../card/Card";
 
 const getData = async (page, cat) => {
-  const baseUrl = "http://localhost:3000";
   const res = await fetch(
-    `${baseUrl}/api/posts?page=${page}&cat=${cat || ""} `,
+    `${process.env.BASE_URL}/api/posts?page=${page}&cat=${cat || ""} `,
     {
       cache: "no-store",
     }
@@ -19,7 +18,7 @@ const getData = async (page, cat) => {
 
 const CardList = async ({ page, cat }) => {
   const { posts, count } = await getData(page, cat);
-  const POST_PER_PAGE = 2;
+  const POST_PER_PAGE = 4;
 
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;

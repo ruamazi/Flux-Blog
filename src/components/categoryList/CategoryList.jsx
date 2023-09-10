@@ -4,8 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const getData = async () => {
-  const baseUrl = "http://localhost:3000";
-  const res = await fetch(baseUrl + "/api/categories", {
+  const res = await fetch(process.env.BASE_URL + "/api/categories", {
     cache: "no-store",
   });
   if (!res) {

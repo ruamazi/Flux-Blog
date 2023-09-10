@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./comments.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
-import { compare } from "swr/_internal";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -20,15 +19,14 @@ const fetcher = async (url) => {
 const Comments = ({ postSlug }) => {
   const { status } = useSession();
 
-  const baseUrl = "http://localhost:3000";
   const { data, isLoading, mutate } = useSWR(
-    `${baseUrl}/api/comments?postSlug=${postSlug}`,
+    `${process.env.BASE_URL}/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
   const [desc, setDesc] = useState("");
   const handleSubmitComnt = async () => {
-    await fetch(baseUrl + "/api/comments", {
+    await fetch(process.env.BASE_URL + "/api/comments", {
       method: "POST",
       body: JSON.stringify({ desc, postSlug }),
     });
